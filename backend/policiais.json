@@ -1,3 +1,4 @@
+[
 {
     "rg_civil": "123456",
     "rg_militar": "MM1234",
@@ -5,4 +6,30 @@
     "data_nascimento": "1990-05-20",
     "matricula": "2025A001"
 
+},
+{
+    "rg_civil": "125456",
+    "rg_militar": "MM1434",
+    "cpf": "11360110820",
+    "data_nascimento": "1990-05-20",
+    "matricula": "2025A002"
+
+
+},
+{
+    "rg_civil": "123656",
+    "rg_militar": "MM1567",
+    "cpf": "11360110620",
+    "data_nascimento": "1990-05-20",
+    "matricula": "2025A003"
+
+},
+{
+    "rg_civil": "123776",
+    "rg_militar": "MM9990",
+    "cpf": "11360555620",
+    "data_nascimento": "1980-0512-20",
+    "matricula": "2025A004"
+
 }
+]

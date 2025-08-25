@@ -6,5 +6,7 @@ router.get("/", controller.listar);
 router.post("/", controller.cadastrar);
 router.get("/cpf", controller.filtrarPorCPF);
 router.get("/rg", controller.filtrarPorRG);
+router.get("/exportar-json", controller.exportarParaJson);
+router.get("/json", controller.getJson);
 
 module.exports = router;
