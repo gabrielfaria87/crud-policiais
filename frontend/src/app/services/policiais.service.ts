@@ -1,29 +1,34 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { Policial } from "../models/policial.model";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Policial } from '../models/policial.model';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root',
 })
-export class PoliciaisService{
-    private apiUrl = 'http://localhost:3000/policiais';
+export class PoliciaisService {
+  private apiUrl = 'http://localhost:3000/policiais';
+  private jsonUrl = 'http://localhost:3000/policiais/json';
 
-    constructor (private http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
-    cadastrar(policial: Policial): Observable<Policial> {
-        return this.http.post<Policial>(this.apiUrl, policial);
-    }
+  cadastrar(policial: Policial): Observable<Policial> {
+    return this.http.post<Policial>(this.apiUrl, policial);
+  }
 
-    listar(): Observable<Policial[]> {
-        return this.http.get<Policial[]>(this.apiUrl);
-    }
+  listar(): Observable<Policial[]> {
+    return this.http.get<Policial[]>(this.apiUrl);
+  }
 
-    filtrarPorCPF(cpf: string): Observable<Policial[]> {
-        return this.http.get<Policial[]>(`${this.apiUrl}?cpf=${cpf}`);
-    }
+  listarDoJson(): Observable<Policial[]> {
+    return this.http.get<Policial[]>(this.jsonUrl);
+  }
 
-    filtrarPorRG(rg: string): Observable<Policial[]> {
-        return this.http.get<Policial[]>(`${this.apiUrl}?rg_civil=${rg}`);
-    }
+  filtrarPorCPF(cpf: string): Observable<Policial[]> {
+    return this.http.get<Policial[]>(`${this.apiUrl}?cpf=${cpf}`);
+  }
+
+  filtrarPorRG(rg: string): Observable<Policial[]> {
+    return this.http.get<Policial[]>(`${this.apiUrl}?rg_civil=${rg}`);
+  }
 }

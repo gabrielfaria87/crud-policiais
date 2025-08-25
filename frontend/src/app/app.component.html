@@ -1,8 +1,40 @@
-<nav>
-  <a routerLink="/listar">Listar Policiais</a>
-  <a routerLink="/cadastrar">Cadastrar Policiais</a>
+<nav
+  style="
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    background: #1976d2;
+    padding: 24px 0;
+  "
+>
+  <a
+    routerLink="/listar"
+    routerLinkActive="active"
+    style="
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 8px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+    "
+    >Listar Policiais</a
+  >
+  <a
+    routerLink="/cadastrar"
+    routerLinkActive="active"
+    style="
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 8px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+    "
+    >Cadastrar Policiais</a
+  >
 </nav>
 
 <router-outlet></router-outlet>
-
-

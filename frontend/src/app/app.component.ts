@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
-import { AppRoutingModule } from "./app-rounting.module";
+import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
-  imports: [AppRoutingModule],
+  standalone: true,
+  imports: [CommonModule, RouterOutlet, HttpClientModule, RouterLink],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'frontend';

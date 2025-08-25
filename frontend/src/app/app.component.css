@@ -1,0 +1,23 @@
+/* Estilo básico para navegação e layout do app */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  background: #1976d2;
+  padding: 16px 0;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+nav a:hover {
+  background: #1565c0;
+}
+body {
+  background: #f5f5f5;
+}
