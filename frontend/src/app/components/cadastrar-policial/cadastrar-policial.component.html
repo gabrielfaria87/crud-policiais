@@ -1,0 +1,57 @@
+<h2>Cadastrar Policial</h2>
+
+<form [formGroup]="policialForm" (ngSubmit)="cadastrar()">
+  <label for="rg_civil">RG Civil:</label>
+  <input id="rg_civil" type="text" formControlName="rg_civil" />
+  <div
+    *ngIf="
+      policialForm.get('rg_civil')?.invalid &&
+      policialForm.get('rg_civil')?.touched
+    "
+  >
+    RG Civil é obrigatório.
+  </div>
+
+  <label for="rg_militar">RG Militar:</label>
+  <input id="rg_militar" type="text" formControlName="rg_militar" />
+  <div
+    *ngIf="
+      policialForm.get('rg_militar')?.invalid &&
+      policialForm.get('rg_militar')?.touched
+    "
+  >
+    RG Militar é obrigatório.
+  </div>
+
+  <label for="cpf">CPF:</label>
+  <input id="cpf" type="text" formControlName="cpf" />
+  <div
+    *ngIf="policialForm.get('cpf')?.invalid && policialForm.get('cpf')?.touched"
+  >
+    CPF deve conter 11 dígitos.
+  </div>
+
+  <label for="data_nascimento">Data de Nascimento:</label>
+  <input id="data_nascimento" type="date" formControlName="data_nascimento" />
+  <div
+    *ngIf="
+      policialForm.get('data_nascimento')?.invalid &&
+      policialForm.get('data_nascimento')?.touched
+    "
+  >
+    Data de nascimento é obrigatória.
+  </div>
+
+  <label for="matricula">Matrícula:</label>
+  <input id="matricula" type="text" formControlName="matricula" />
+  <div
+    *ngIf="
+      policialForm.get('matricula')?.invalid &&
+      policialForm.get('matricula')?.touched
+    "
+  >
+    Matrícula é obrigatória.
+  </div>
+
+  <button type="submit" [disabled]="policialForm.invalid">Cadastrar</button>
+</form>

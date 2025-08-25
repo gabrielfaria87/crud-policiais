@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { AppRoutingModule } from "./app-rounting.module";
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [AppRoutingModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
